@@ -1,0 +1,50 @@
+.md{
+    background-color: rgba(8, 8, 39, 0.8);
+    height: 100%;
+    width: 95%;
+    border-radius: 111px;
+    margin-top:1%;
+    box-shadow: 1px 3px 19px black;
+}
+
+.txt{
+    font-size:220%;
+    font-weight: lighter;
+    font-variant: small-caps;
+    color: rgb(255, 255, 255);
+    padding-top: 5%;
+}
+
+.tx{
+    color: rgb(194, 194, 193);
+}
+
+.int{
+    width: 80%;
+    border-radius: 15px;
+    margin-left: 10%;
+    margin-top: 4%;
+    text-align: center;
+    font-weight: lighter;
+    box-shadow: 1px 3px 4px black;
+    
+}
+
+.btn{
+    background-color:rgba(255, 236, 236, 0.36);
+    width: 40%;
+    margin-top: 1%;
+    margin-left: 30%;   
+    border-radius: 15px;
+    box-shadow: 1px 3px 4px black;
+    color: white;
+
+}
+.t3{
+    text-align: center;
+    margin-top: 1%;
+    color: rgb(194, 194, 193);
+    padding: 2%;
+
+
+}

@@ -8,11 +8,11 @@ export const requireSignIn = async (req, res, next) => {
       req.headers.authorization,
       process.env.JWT_SECRET
     );
-    req.user=decode, 
-    next();
+    
+
+    (req.user = decode), next();
   } catch (error) {
     console.log(error);
-    
   }
 };
 
@@ -32,9 +32,9 @@ export const isAdmin = async (req, res, next) => {
   } catch (error) {
     console.log(error);
     res.status(401).send({
-        success: false,
-        error,
-        message: "erroe in admin middleware",
-      });
+      success: false,
+      error,
+      message: "erroe in admin middleware",
+    });
   }
 };

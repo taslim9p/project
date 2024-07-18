@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
   {
-    name: {
+    uname: {
       type: String,
       required: true,
       trim: true,
@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema(
     address: {
       type: String,
       required: true,
+    },
+    answer:{
+      type:String,
+      required:true
     },
     role: {
       type: Number,

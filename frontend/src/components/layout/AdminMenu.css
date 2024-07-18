@@ -1,0 +1,36 @@
+/* .main{
+    display: grid;
+    grid-template-columns:20% 80% ;
+    grid-template-rows: 100%;
+    height: 100vh;
+    column-gap: 0.3%;
+
+} */
+
+.sidebar{
+  
+    /* grid-column: 12; */
+    height: 100vh;
+    width: 20vw;
+}
+
+/* .s2{
+    background-color: antiquewhite;
+    grid-column: 2;
+} */
+
+.nav{
+    padding: 5%;
+    text-align: center;
+    border: 2px solid black;
+    margin: 0.5%;
+   
+    
+}
+.nav:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+   
+   
+
+}
