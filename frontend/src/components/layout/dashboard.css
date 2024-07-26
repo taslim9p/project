@@ -1,0 +1,29 @@
+/* Styles for the hamburger menu */
+.hamburger {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+    
+    .sidebar.active {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      z-index: 10;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(0);
+    }
+    
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      z-index: 20;
+    }
+  }
+  

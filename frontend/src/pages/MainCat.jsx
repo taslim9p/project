@@ -29,7 +29,7 @@ function MainCat() {
   // }, []);
 
   return (
-    <div className="flex justify-evenly">
+    <div className="flex  justify-evenly">
       {categories.map((c) => {
         return (
           <a href="" key={c._id}>

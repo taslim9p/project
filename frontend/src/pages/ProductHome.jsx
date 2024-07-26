@@ -86,7 +86,7 @@ function ProductHome() {
                 className="h-36 w-full object-cover "
               />
               <hr className="bg-red w-full my-2" />
-              <h1 className="text-lg font-bold">{p.name}</h1>
+              <h1 className="text-lg font-bold">{p.name.substring(0, 10)}...</h1>
               <h1 className="text-md text-gray-700">&#8377;{p.price}</h1>
               <h1 className="text-sm text-gray-600">
                 {p.description.substring(0, 25)}...
@@ -96,7 +96,10 @@ function ProductHome() {
               <Link
                 to={`/product/${p.slug}`}
                
-                className="bg-blue-500 text-white px-2 py-1 rounded"
+                // className="bg-blue-500 text-white px-2 py-1 rounded"
+                className="rounded px-2 py-1 text-white"
+                style={{background:
+                  "linear-gradient(135deg,rgba(0, 0, 0, 1),rgba(76, 76, 75, 0.2))"}}
               >
                 Show Details
               </Link>
@@ -106,7 +109,10 @@ function ProductHome() {
                   localStorage.setItem("cart", JSON.stringify([...cart, p]));
                   toast.success(`${p.name} added to cart`);
                 }}
-                className="bg-green-500 text-white px-2 py-1 rounded"
+                // className="bg-green-500 text-white px-2 py-1 rounded"
+                className="rounded  px-2 py-1 text-white"
+                style={{background:
+                  "linear-gradient(135deg,rgba(0, 0, 0, 1),rgba(766, 766, 75, 0.2))"}}
               >
                 Add to Cart
               </button>
@@ -117,7 +123,9 @@ function ProductHome() {
       <div className="text-center mt-10">
         {products && products.length < total && (
           <button
-            className=" text-black bg-slate-300 border-black hover:text-white px-4 py-2 rounded  mt-4 transition duration-300 ease-in-out transform hover:bg-blue-400 hover:scale-105 hover:shadow-lg"
+            className="   border-2 text-black border-black px-4 py-2 rounded  mt-4 transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg"
+            // style={{background:
+            //   "linear-gradient(135deg,rgba(0, 0, 2, 1),rgba(79, 7, 72, 0.2))"}}
             onClick={(e) => {
               e.preventDefault();
               setPage(page + 1);

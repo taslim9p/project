@@ -25,7 +25,7 @@ function ForgotPassword() {
       if (res && res.data.success) {
         toast.success(res.data.message);
        
-        navigate("/login");
+        navigate("/signin");
       } else {
         toast.error(res.data.message);
       }
@@ -36,17 +36,14 @@ function ForgotPassword() {
   };
   return (
     <Layout title={"Signup-page"}>
-      <div className="grid grid-cols-6">
-        <div className="col-span-2">
-          <Mainlogo />
-        </div>
-        <div className="col-span-4">
+      
+        <div className="">
           <form action="" onSubmit={handleSubmit}>
-            <div className="mdd">
+            <div className="mdd h-80 ">
               <h1 className=" text-center text-white txtt">Reset password</h1>
               
 
-              <div className="mt-4">
+              <div className="">
                 <input
                   type="email"
                   placeholder="Email"
@@ -55,7 +52,7 @@ function ForgotPassword() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                <div className="mt-4">
+                <div className="">
                 <input
                   type="password"
                   placeholder="New Password"
@@ -66,7 +63,7 @@ function ForgotPassword() {
                 />
                 <input
                   type="text"
-                  placeholder="your first pet name"
+                  placeholder="your first pet's name"
                   className="intt"
                   value={answer}
                   onChange={(e) => setAnswer(e.target.value)}
@@ -85,7 +82,7 @@ function ForgotPassword() {
             </div>
           </form>
         </div>
-      </div>
+      
     </Layout>
   );
 }

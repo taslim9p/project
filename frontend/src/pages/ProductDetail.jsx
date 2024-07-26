@@ -65,7 +65,7 @@ function ProductDetail() {
             </h1>
             <hr className="mb-4 mr-6" />
             <h6 className="mb-2">Name: {product.name}</h6>
-            <h6 className="mb-2">Description: {product.description}</h6>
+            <h6 className="mb-2 mr-5">Description: {product.description}</h6>
             <h6 className="mb-2">Price:&#8377;{product.price}</h6>
             <h6 className="mb-2">Category: {product?.category?.name}</h6>
 
@@ -75,7 +75,9 @@ function ProductDetail() {
                 localStorage.setItem("cart", JSON.stringify([...cart, product]));
                 toast.success(`${product.name} added to cart`);
               }}
-              className="bg-gray-800 text-white px-4 mr-6 py-2 mt-4 rounded"
+              className=" text-white px-4 mr-6 py-2 mt-4 rounded"
+              style={{background:
+                "linear-gradient(135deg,rgba(0, 0, 0, 1),rgba(766, 766, 75, 0.2))"}}
             >
               ADD TO CART
             </button>
@@ -106,13 +108,15 @@ function ProductDetail() {
                   }}
                 />
                 <div className="p-4 text-center flex flex-col">
-                  <h5 className="font-semibold text-lg">{p.name}</h5>
+                  <h5 className="font-semibold text-lg">{p.name.substring(0,20)}</h5>
                   <p className="text-gray-500 text-sm mb-2 ">
-                    {p.description.substring(0, 30)}...
+                    {p.description.substring(0, 20)}...
                   </p>
                   <div className=" justify-between flex-row ">
                     <button
-                      className="bg-blue-500 text-white px-4 py-2 rounded justify-center"
+                      className=" text-white px-4 py-2 rounded justify-center"
+                      style={{background:
+                        "linear-gradient(135deg,rgba(0, 0, 0, 1),rgba(76, 76, 75, 0.2))"}}
                       onClick={() =>{ navigate(`/product/${p.slug}`)
                     }}
 

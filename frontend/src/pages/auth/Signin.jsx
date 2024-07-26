@@ -41,10 +41,7 @@ function Signin() {
   };
   return (
     <Layout title={"Signup-page"}>
-      <div className="grid grid-cols-6">
-        <div className="col-span-2">
-          <Mainlogo />
-        </div>
+   
         <div className="col-span-4">
           <form action="" onSubmit={handleSubmit}>
             <div className="mdd">
@@ -58,13 +55,13 @@ function Signin() {
                 <input
                   type="email"
                   placeholder="Email"
-                  className="intt"
+                  className="intt mb-2"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
                 <input
-                  type="text"
+                  type="password"
                   placeholder="PASSWORD"
                   className="intt"
                   value={password}
@@ -82,7 +79,7 @@ function Signin() {
               </button>
               <div className="t33">
                 <div>NOT REGISTER YET?</div>
-                <a href="/signup">SIGNUP</a>
+                <a href="/register">SIGNUP</a>
                 <br />
                 <a href="/forgot-password" className="text-sm">
                   FORGOT PASSWORD ?
@@ -91,7 +88,7 @@ function Signin() {
             </div>
           </form>
         </div>
-      </div>
+      
     </Layout>
   );
 }

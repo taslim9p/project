@@ -25,7 +25,7 @@ const SearchResults = () => {
             key={p._id}
             className="h-80 w-60 rounded-2xl border-2 border-black overflow-hidden flex flex-col justify-between"
           >
-            <div className="flex flex-col items-center p-2">
+            <div className="flex flex-col items-center p-2 ">
               <img
                 src={`${
                   import.meta.env.VITE_API
@@ -34,15 +34,15 @@ const SearchResults = () => {
                 className="h-36 w-full object-cover "
               />
               <hr className="bg-red w-full my-2" />
-              <h1 className="text-lg font-bold">{p.name}</h1>
-              <h1 className="text-md text-gray-700">&#8377;{p.price}</h1>
+              <h1 className="text-lg font-bold">{p.name.substring(0,15)}</h1>
+              <h1 className="text-md  text-gray-700">&#8377;{p.price}</h1>
               <h1 className="text-sm text-gray-600">
                 {p.description.substring(0, 25)}...
               </h1>
             </div>
             <div className="flex justify-between p-2 ">
               <Link
-                to={`/product/${p._id}`}
+                to={`/product/${p.slug}`}
                 className="bg-blue-500 text-white px-2 py-1 rounded"
               >
                 Show Details

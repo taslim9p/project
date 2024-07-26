@@ -20,6 +20,8 @@ import ProductDetail from "./pages/ProductDetail";
 import CategoryDetail from "./pages/CategoryDetail";
 import { Route, Routes } from "react-router-dom";
 import CartPage from "./pages/CartPage";
+import Reg from "./pages/auth/Reg.jsx";
+import AdminOrders from "./pages/admin/AdminOrders";
 
 // import Car from "./components/carousell/Car";
 
@@ -46,11 +48,15 @@ export default function App() {
           <Route path="admin/create-category" element={<CreateCategory />} />
           <Route path="admin/create-product" element={<CreateProduct />} />
           <Route path="admin/product/:slug" element={<UpdateProduct />} />
+          <Route path="admin/orders" element={<AdminOrders/>} />
+
 
           <Route path="admin/products" element={<Products />} />
           <Route path="admin/users" element={<Users />} />
         </Route>
-        <Route path="/register" element={<Register />} />
+        {/* <Route path="/register" element={<Register />} /> */}
+        <Route path="/reg" element={<Reg/>} />
+
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/*" element={<PageNotFound />} />

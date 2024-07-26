@@ -50,7 +50,7 @@ function Products() {
                     />
                   </div>
                   <div className="p-4">
-                    <h5 className="text-lg font-semibold mb-2">{p.name}</h5>
+                    <h5 className="text-lg font-semibold mb-2">{p.name.substring(0, 10)}...</h5>
                     <p className="text-gray-700">{p.description.substring(0, 20)}...</p>
                   </div>
                 </div>
