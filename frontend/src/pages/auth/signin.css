@@ -1,11 +1,24 @@
 .mdd{
-    background-color: rgba(8, 8, 39, 0.8);
+    /* background-color: rgba(8, 8, 39, 0.8);
     height: 100%;
     width: 95%;
     border-radius: 111px;
     margin-top:2%;
-    box-shadow: 1px 3px 19px black;
+    box-shadow: 1px 3px 19px black; */
     /* margin-bottom: -20px; */
+    /* background:linear-gradient(135deg,rgba(14, 6, 79, 0.9),rgba(8, 2, 38, 0.5));  */
+    background:linear-gradient(135deg,rgba(0, 0, 0, 1),rgba(76, 76, 75, 0.4)); 
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* color: rgb(8, 8, 39); */
+    height: 80vh;
+    width: 40vw;
+    border-radius: 10%;
+    margin-left: 30%;
+    /* border: 2px solid rgb(185, 170, 170); */
+    margin-top:1%;
+    box-shadow: 1px 3px 19px black;
 }
 
 .txtt{
@@ -18,13 +31,17 @@
 
 .txx{
     /* margin-top: 3%; */
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+
     color: rgb(194, 194, 193);
 }
 
 .intt{
-    width: 80%;
+    width: 90% !important;
     border-radius: 15px;
-    margin-left: 10%;
+    margin-left: 5.2%;
     margin-top: 4%;
     text-align: center;
     font-weight: lighter;

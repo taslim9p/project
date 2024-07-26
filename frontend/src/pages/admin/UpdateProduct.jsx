@@ -165,7 +165,7 @@ function UpdateProduct() {
               onChange={(e) => setQuantity(e.target.value)}
             />
           </div>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <Select
               variant={false}
               placeholder="Select Shipping"
@@ -178,7 +178,7 @@ function UpdateProduct() {
               <Option value="0">No</Option>
               <Option value="1">Yes</Option>
             </Select>
-          </div>
+          </div> */}
           <div className="mb-4">
             <label className="flex items-center justify-center border border-gray-300 rounded-md py-2 px-4 cursor-pointer hover:bg-gray-100">
               {photo ? photo.name : "Upload Photo"}

@@ -43,13 +43,15 @@ function CategoryDetail() {
           style={{ height: "200px", width: "200px", objectFit: "contain", }}
         />
         <div className="p-4 text-center flex flex-col">
-          <h5 className="font-semibold text-lg">{p.name}</h5>   
+          <h5 className="font-semibold text-lg">{p.name.substring(0,10)}</h5>   
           <p className="text-gray-500 text-sm mb-2 ">
             {p.description.substring(0, 30)}...
           </p>
           <div className=" justify-between flex-row ">
             <button
-              className="bg-blue-500 text-white px-4 py-2 rounded justify-center"
+              className=" text-white px-4 py-2 rounded justify-center"
+              style={{background:
+                "linear-gradient(135deg,rgba(0, 0, 0, 1),rgba(76, 76, 75, 0.2))"}}
               onClick={() => navigate(`/product/${p.slug}`)}
             >
               More Details

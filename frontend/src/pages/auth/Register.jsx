@@ -38,81 +38,74 @@ function Register() {
 
   return (
     <Layout title={"Signup-page"}>
-      <div className="grid grid-cols-6">
-        <div className="col-span-2">
-          <Mainlogo />
-        </div>
-        <div className="col-span-4">
-          <form action="" onSubmit={handleSubmit}>
-            <div className="md">
-              <h1 className=" text-center text-white txt">signup page</h1>
-              <div className="text-center tx font-light">
-                "Join us today to streamline your hardware shopping."
-              </div>
-              <div className="mt-2">
-                <input
-                  type="text"
-                  placeholder="USERNAME"
-                  className="int"
-                  value={uname}
-                  onChange={(e) => setUname(e.target.value)}
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="PASSWORD"
-                  className="int"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
+      <form action="" className=" md" onSubmit={handleSubmit}>
+        <div className="">
+          <h1 className=" text-center text-white txt">signup page</h1>
+          <div className="text-center tx font-light">
+            "Join us today to streamline your hardware shopping."
+          </div>
+          <div className="mt-2">
+            <input
+              type="text"
+              placeholder="USERNAME"
+              className="int"
+              value={uname}
+              onChange={(e) => setUname(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              placeholder="PASSWORD"
+              className="int"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
 
-                <input
-                  type="text"
-                  placeholder="EMAIL"
-                  className="int"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                <input
-                  type="number"
-                  placeholder="phone"
-                  className="int"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="address"
-                  className="int"
-                  value={address}
-                  onChange={(e) => setAddress(e.target.value)}
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="your pet's name "
-                  className="int"
-                  value={answer}
-                  onChange={(e) => setAnswer(e.target.value)}
-                  required
-                />
-              </div>
-              <br />
-              <button className="btn" type="submit">
-                SignUp
-              </button>
+            <input
+              type="email"
+              placeholder="EMAIL"
+              className="int"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <input
+              type="number"
+              placeholder="phone"
+              className="int"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+            <input
+              type="text"
+              placeholder="address"
+              className="int"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              required
+            />
+            <input
+              type="text"
+              placeholder="your first pet's name"
+              className="int"
+              value={answer}
+              onChange={(e) => setAnswer(e.target.value)}
+              required
+            />
+          </div>
+          <br />
+          <button className="btn" type="submit">
+            SignUp
+          </button>
 
-              <div className="t3">
-                <div>ALREADY SIGNUP?</div>
-                <a href="/signin">SIGN IN</a>
-              </div>
-            </div>
-          </form>
+          <div className="t3">
+            <div>ALREADY SIGNUP?</div>
+            <a href="/signin">SIGN IN</a>
+          </div>
         </div>
-      </div>
+      </form>
     </Layout>
   );
 }

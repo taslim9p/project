@@ -1,0 +1,65 @@
+.main{
+    height: 100vh;
+    width: 98.7vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.box{
+    
+    top: 10%;
+    left: 25%;
+    height: 80vh;
+    width: 50vw;
+    border: 2px solid black;
+    
+    
+}
+
+input{
+    border: 1px solid black;
+}
+textarea{
+    border: 1px solid black;
+}
+label{
+    margin-right: 2%;
+}
+.responsive-textarea {
+    width: 100%; /* Full width of the container */
+    height: 200px; /* Default height */
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+    resize: both; /* Allows resizing, use 'none' to prevent resizing */
+  }
+  
+  @media (min-width: 640px) {
+    .responsive-textarea {
+      height: 50px; /* Increased height for medium screens and up */
+    }
+    input{
+        width: 50%;
+        margin-right: 2%;
+    }
+   
+  }
+  @media (max-width: 600px) {
+    .responsive-textarea {
+      height: 50px; /* Increased height for medium screens and up */
+    }
+    input{
+        width: 50%;
+        margin-right: 2%;
+    }
+  }
+  @media (min-width: 1024px) {
+    .responsive-textarea {
+      height: 30px; /* Increased height for large screens and up */
+    }
+   
+  }
+  

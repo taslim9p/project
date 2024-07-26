@@ -40,38 +40,34 @@ const CartPage = () => {
     }
   };
 
-  const getToken = async () => {
-    try {
-      const { data } = await axios.get("/api/v1/product/braintree/token");
-      setClientToken(data?.clientToken);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+ 
 
   useEffect(() => {
-    getToken();
+    
   }, [auth?.token]);
 
-  const handlePayment = async () => {
+  const handleCheckout = async () => {
     try {
-      setLoading(true);
-      const { nonce } = await instance.requestPaymentMethod();
-      const { data } = await axios.post("/api/v1/product/braintree/payment", {
-        nonce,
+      const { data } = await axios.post(`${import.meta.env.VITE_API}/api/v1/auth/addorders`, {
         cart,
       });
-      setLoading(false);
-      localStorage.removeItem("cart");
-      setCart([]);
-      navigate("/dashboard/user/orders");
-      toast.success("Payment Completed Successfully");
+      
+      if (data.success) {
+        setLoading(false);
+        localStorage.removeItem("cart");
+        setCart([]);
+        navigate("/dashboard/user/orders");
+        toast.success("Order placed successfully!");
+      } else {
+        toast.error(data.message);
+      }
     } catch (error) {
       console.log(error);
       setLoading(false);
+      toast.error("Failed to place order. Please try again.");
     }
   };
-
+  
   return (
     <Layout>
       <div className="cart-page">
@@ -177,14 +173,28 @@ const CartPage = () => {
                     />
                     <button
                       className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-                      onClick={handlePayment}
-                      disabled={loading || !instance || !auth?.user?.address}
+                      onClick={handleCheckout}
+                     
                     >
-                      {loading ? "Processing ...." : "Make Payment"}
+                      Make Order
                     </button>
                   </>
                 )}
               </div>
+
+              {
+                !cart?.length ?(""):(
+                  <>
+                  <button
+                      className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+                      onClick={handleCheckout}
+                     
+                    >
+                      Make Order
+                    </button>
+                  </>
+                )
+              }
             </div>
           </div>
         </div>
